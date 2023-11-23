@@ -17,7 +17,7 @@ env = environ.Env(
 environ.Env.read_env(BASE_DIR / ".env")
 
 SECRET_KEY = env('SECRET_KEY')
-DEBUG=env("DEBUG")
+DEBUG = env("DEBUG")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -123,7 +123,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'http://127.0.0.1:5500/main.html'
 # SOCIALACCOUNT_LOGIN_ON_GET = True
 """바로 카카오 로그인페이지로 넘어가게 하는 설정"""
 # ACCOUNT_LOGOUT_REDIRECT_URL = '/'
